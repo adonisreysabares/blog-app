@@ -12,11 +12,10 @@
                 <div class="post-container">
                     <h2><%= postItem.title %></h2>
                     <p><%= postItem.content %></p>
-                    <form action="/delete/<%= post.id%>" method="delete">
-                        <input type="submit" value="Delete">
+                    <a href="/edit/<%= postItem.id %>"><button class="edit">Edit</button></a>
+                    <form action="/delete/<%= postItem.id %>" method="post" style="display:inline;">
+                        <button class="delete" type="submit">Delete</button>
                     </form>
-                    <button>edit</button>
-                    <button>delete</button>
                 </div>
             <% }); %>
         <% } else { %>
