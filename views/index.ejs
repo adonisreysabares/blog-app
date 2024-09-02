@@ -6,16 +6,18 @@
 <div class="blog-content-container">
 
     <div class="blog-space-container">
-        <h1>This is the Blog Space</h1>
+            <h1>This is the Blog Space</h1>
         <% if (post.length > 0) { %>
             <% post.forEach(function(postItem) { %>
                 <div class="post-container">
-                    <h2><%= postItem.title %></h2>
-                    <p><%= postItem.content %></p>
-                    <a href="/edit/<%= postItem.id %>"><button class="edit">Edit</button></a>
-                    <form action="/delete/<%= postItem.id %>" method="post" style="display:inline;">
-                        <button class="delete" type="submit">Delete</button>
-                    </form>
+                    <div class="container">
+                        <h2><%= postItem.title %></h2>
+                        <p><%= postItem.content %></p><br>
+                        <a href="/edit/<%= postItem.id %>"><button class="edit">Edit</button></a>
+                        <form action="/delete/<%= postItem.id %>" method="post" style="display:inline;">
+                            <button class="delete" type="submit">Delete</button>
+                        </form>
+                    </div>
                 </div>
             <% }); %>
         <% } else { %>
