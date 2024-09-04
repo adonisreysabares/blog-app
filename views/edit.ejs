@@ -1,23 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Post</title>
-    <link rel="stylesheet" href="/css/style.css">
-<body>
-<%- include('./partials/navbar')  %>
 
-    <h1>Edit Post</h1>
-    <form action="/update/<%= post.id %>" method="post">
-        <label for="title">Title</label>
-        <input type="text" name="title" id="title" value="<%= post.title %>" required>
-        
-        <label for="content">Content</label>
-        <textarea name="content" id="content" required><%= post.content %></textarea>
-        
-        <input type="submit" value="Update">
-    </form>
-    <a href="/">Back to Home</a>
+<%- include('./partials/header')  %> 
+
+<%- include('./partials/navbar')  %>
+<div class="blog-content-container">
+    <div class="form-container">
+        <form action="/update/<%= post.id %>" method="post">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" value="<%= post.title %>" required>
+                
+            <label for="content">Content</label>
+            <textarea name="content" id="content" required><%= post.content %></textarea>
+                
+            <input type="submit" value="Update">
+            <a href="/" class="gotohome">Back to Home</a>
+        </form>
+    </div>
+    
+</div>
+   
 <%- include('./partials/footer') %>    
-</body>
-</html>

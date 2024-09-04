@@ -15,9 +15,7 @@ body{
     height: 85dvh;
 }
 
-
 /***navigation Bar **/
-
 
 nav{
     display: flex;
@@ -37,40 +35,34 @@ nav > ul > li > a {
     color: rgb(255, 255, 255);
 }
 
-
 /***** Blog Container *****/
 .blog-content-container{
-
-    padding:1em 6em 1em 6em;
-    display: grid;
-    gap: 50px;
-    grid-template-columns: 1fr 1fr;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    height: 85vh;
 }
 
 
 /**** post container **/
 .blog-space-container {
-    padding: 50px 5px;
+    padding: 15px 90px;
+    height: 73vh;
     overflow-x: hidden;
 }
 
-.blog-space-container > h1 {
+h1 {
     margin-bottom: 20px; 
     font-size: 2em;      
     font-weight: bold;   
     color: #333;         
     border-bottom: 2px solid #ddd;
-    padding-bottom: 10px; 
-}
-
-
-.post-container{
-    padding: 10px 0;
+    padding:10px 90px; 
 }
 
 .container{
-    background-color: #007BFF;
+    background-color: #ccc;
     padding: 20px;
     border-radius: 10px;
     max-height: 100%;
@@ -105,7 +97,8 @@ form {
     max-width: 500px; 
     display: flex;
     flex-direction: column;
-    gap: 15px; 
+    gap: 15px;
+    height: 100%; 
 }
 
 label {
@@ -139,4 +132,13 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+a{
+    text-decoration: none;
+    color: #ccc;
+}
+
+.post-container{
+    gap: 50px;
 }

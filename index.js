@@ -16,6 +16,10 @@ app.get('/',(req,res)=>{
     })
 })
 
+app.get('/create', (req,res)=>{
+    res.render('create')
+})
+
 app.post('/create', (req,res)=>{
     const {title, content} = req.body
     const newPost = {id: nextId++, title,content}
